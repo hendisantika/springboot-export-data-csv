@@ -1,5 +1,7 @@
 package com.hendisantika.springbootexportdatacsv.data;
 
+import com.opencsv.bean.CsvBindByPosition;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : springboot-export-data-csv
@@ -12,16 +14,19 @@ package com.hendisantika.springbootexportdatacsv.data;
 public class User {
     //    Enable columns positions if you want to
 //    have your customs order.
-
-    //    @CsvBindByPosition(position = 0)
+    @CsvBindByPosition(position = 0)
     private long id;
-    //    @CsvBindByPosition(position = 1)
+
+    @CsvBindByPosition(position = 1)
     private String name;
-    //    @CsvBindByPosition(position = 2)
+
+    @CsvBindByPosition(position = 2)
     private String email;
-    //    @CsvBindByPosition(position = 3)
+
+    @CsvBindByPosition(position = 3)
     private String country;
-    //    @CsvBindByPosition(position = 4)
+
+    @CsvBindByPosition(position = 4)
     private int age;
 
     public User(long id, String name, String email, String country, int age) {
